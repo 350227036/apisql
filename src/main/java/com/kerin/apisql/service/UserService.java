@@ -18,5 +18,6 @@ public class UserService {
   public void add(User user) {
 
     userMapper.insertSelective(user);
+
   }
 }

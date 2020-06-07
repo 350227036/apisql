@@ -48,6 +48,25 @@
   </dependencies>
 
   <build>
+    <!--//找mapper-->
+    <resources>
+      <resource>
+        <directory>src/main/java</directory>
+        <includes>
+          <include>**/*.xml</include>
+        </includes>
+      </resource>
+
+      <resource>
+        <directory>src/main/resources</directory>
+        <includes>
+          <include>**/*.properties</include>
+          <include>**/*.xml</include>
+          <include>**/mapper/*.xml</include>
+          <include>**/*.yml</include>
+        </includes>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <groupId>org.springframework.boot</groupId>
@@ -61,6 +80,9 @@
       </plugin>
 
     </plugins>
+
+
+
   </build>
 
 </project>
