@@ -20,4 +20,20 @@ public class UserService {
     userMapper.insertSelective(user);
 
   }
+
+  public int updateById(User user) {
+
+    return userMapper.updateByPrimaryKeySelective(user);
+
+  }
+  public void delById(Integer id) {
+
+    userMapper.deleteByPrimaryKey(id);
+
+  }
+  public User getById(Integer id) {
+
+    return userMapper.selectByPrimaryKey(id);
+
+  }
 }
